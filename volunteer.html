@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تطوّع معنا | Ezwitti — عزوتي</title>
+  <meta name="description" content="انضم إلى فريق متطوعي مطعم عزوتي وكن جزءاً من مبادرة عازم ومعزوم في الأردن.">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+</head>
+<body>
+
+  <!-- ========================================================================
+       TOP HEADER NAVIGATION (Ballena Cabo Style)
+       ======================================================================== -->
+  <header class="site-header scrolled" id="siteHeader">
+    <div class="nav-wrapper">
+      
+      <!-- Left: Hamburger Button -->
+      <div class="nav-left">
+        <button class="menu-trigger" id="menuTriggerBtn" aria-label="Open navigation menu">
+          <span class="hamburger-icon" aria-hidden="true">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </span>
+          <span class="menu-label" data-i18n="menuLabel">القائمة</span>
+        </button>
+      </div>
+
+      <!-- Center: Centered Ezwitti Logo -->
+      <div class="nav-center">
+        <a href="index.html" class="brand-logo" aria-label="Ezwitti Homepage">
+          <span class="brand-title" data-i18n="brandTitle">عِزْوَتِي</span>
+          <span class="brand-sub" data-i18n="brandSub">مطعم اجتماعي غير ربحي</span>
+        </a>
+      </div>
+
+      <!-- Right: Language Switcher & Prominent "Sponsor a Meal" CTA -->
+      <div class="nav-right">
+        <button class="lang-switch-btn" id="langSwitchBtn" aria-label="Switch Language">EN</button>
+        <button class="btn-sponsor btn-sponsor-trigger" data-i18n="sponsorBtn">اعزم شخص</button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       FULL-SCREEN DRAWER MENU
+       ======================================================================== -->
+  <div class="menu-drawer" id="menuDrawer" aria-hidden="true" role="dialog">
+    <div class="drawer-header">
+      <span class="brand-sub" data-i18n="brandSub">مطعم اجتماعي غير ربحي</span>
+      <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">
+        <span data-i18n="closeMenu">إغلاق</span>
+        <span aria-hidden="true" style="font-size: 1.2rem; line-height: 1;">✕</span>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <ul class="drawer-nav-list">
+        <li class="drawer-nav-item">
+          <a href="index.html#hero" class="drawer-nav-link">
+            <span class="drawer-nav-num">01</span>
+            <span data-i18n="navHome">الرئيسية</span>
+          </a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="story.html" class="drawer-nav-link">
+            <span class="drawer-nav-num">02</span>
+            <span data-i18n="navStory">قصتنا — من عزومة بدأت الحكاية</span>
+          </a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="media.html" class="drawer-nav-link">
+            <span class="drawer-nav-num">03</span>
+            <span data-i18n="navMedia">عزوتي بعيون العالم</span>
+          </a>
+        </li>
+        <li class="drawer-nav-item">
+          <!-- Highlighted Volunteer Link to Dedicated Page -->
+          <a href="volunteer.html" class="drawer-nav-link highlight active">
+            <span class="drawer-nav-num">04</span>
+            <span data-i18n="navVolunteer">تطوّع معنا</span>
+          </a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="index.html#contact" class="drawer-nav-link">
+            <span class="drawer-nav-num">05</span>
+            <span data-i18n="navContact">الموقع والتواصل</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="drawer-footer">
+      <span data-i18n="locationNote">عمّان، الأردن — وسط البلد، قرب درج الكلحة</span>
+      <span>© 2015 – 2026 Ezwitti</span>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       PAGE HERO
+       ======================================================================== -->
+  <section class="volunteer-page-hero">
+    <div class="container-narrow">
+      <span class="section-label-chip">عائلة عزوتي / Join Our Community</span>
+      <h1 style="font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: 16px;">تطوّع معنا — Volunteer With Us</h1>
+      <p style="font-size: 1.15rem; max-width: 600px; margin: 0 auto; line-height: 1.7;">
+        المتطوعون هم القلب النابض لمطعم عزوتي. شاركنا في إعداد الوجبات وخدمة المجتمع في أجواء مفعمة بالمحبة والكرامة.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       VOLUNTEER REGISTRATION FORM CARD
+       ======================================================================== -->
+  <main class="container">
+    <div class="form-wrapper-card">
+      <form id="volunteerForm" novalidate>
+        
+        <!-- Notice Box: Pending Status -->
+        <div class="form-notice-box">
+          <strong>ملاحظة للمتطوعين:</strong> تبقى جميع طلبات التطوع قيد الانتظار حتى مراجعتها واعتمادها من قبل فريق التنسيق في عزوتي والتواصل معكم لتأكيد التاريخ والوقت.
+        </div>
+
+        <!-- Full Name -->
+        <div class="form-group">
+          <label for="fullName" class="form-label">الاسم الكامل / Full Name *</label>
+          <input type="text" id="fullName" class="form-input" placeholder="أدخل اسمك الكريم" required>
+        </div>
+
+        <!-- Email or Phone -->
+        <div class="form-group">
+          <label for="contactInfo" class="form-label">البريد الإلكتروني أو رقم الهاتف / Email or Phone *</label>
+          <input type="text" id="contactInfo" class="form-input" placeholder="07xxxxxxxx أو name@example.com" required>
+        </div>
+
+        <!-- Gender -->
+        <div class="form-group">
+          <span class="form-label">الجنس / Gender *</span>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="gender" value="male" required>
+              <span>ذكر / Male</span>
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="gender" value="female" required>
+              <span>أنثى / Female</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Preferred Date -->
+        <div class="form-group">
+          <label for="prefDate" class="form-label">التاريخ المفضل للتطوع / Preferred Date *</label>
+          <input type="date" id="prefDate" class="form-input" required>
+        </div>
+
+        <!-- Preferred Time -->
+        <div class="form-group">
+          <label for="prefTime" class="form-label">الوقت المفضل / Preferred Time *</label>
+          <input type="text" id="prefTime" class="form-input" placeholder="مثال: الفترة الصباحية (10:00 صباحاً) أو بعد الظهر" required>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn-primary-editorial" style="width: 100%; margin-top: 16px;">
+          إرسال طلب التطوع / Submit Request
+        </button>
+
+        <!-- Feedback Container -->
+        <div id="formFeedback" class="form-feedback" role="alert"></div>
+
+      </form>
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       SPONSOR A MEAL DIALOG
+       ======================================================================== -->
+  <div class="sponsor-dialog" id="sponsorDialog" role="dialog" aria-modal="true" aria-labelledby="sponsorTitle">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="sponsorDialogClose" aria-label="Close dialog">✕</button>
+
+      <div class="modal-body" style="padding: 48px 32px;">
+        <span class="modal-tag">عازم ومعزوم</span>
+        <h2 class="modal-title font-editorial" id="sponsorTitle" data-i18n="sponsorTitle">عازم ومعزوم — اعزم شخص</h2>
+        <p class="modal-desc" data-i18n="sponsorDesc" style="margin-bottom: 20px;">
+          فكرة عزوتي مبنية على أن يقوم القادر بدفع ثمن وجبة لشخص لا يعرفه، وتعليق البطاقة على جدار الخير ليحصل عليها المحتاج بكرامة تامة ودون أن يُسأل عن هويته.
+        </p>
+        <div style="background-color: var(--color-cream-deep); padding: 18px 24px; border-radius: 6px; border-inline-start: 4px solid var(--color-terracotta); text-align: start; margin-bottom: 28px;">
+          <p style="font-size: 0.92rem; color: var(--color-charcoal); line-height: 1.6;" data-i18n="sponsorNote">
+            ملاحظة: بانتظار تفعيل وسائل الدفع المعتمدة رسمياً من إدارة عزوتي، نرحب بزيارتكم الكريمة لمطعمنا في وسط البلد للمشاركة حضورياً.
+          </p>
+        </div>
+
+        <button class="btn-primary-editorial" id="sponsorDialogDismiss" data-i18n="sponsorClose">إغلاق النافذة</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/main.js"></script>
+  <script src="scripts/volunteer.js"></script>
+</body>
+</html>

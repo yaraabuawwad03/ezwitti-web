@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>قصتنا | Ezwitti — عزوتي</title>
+  <meta name="description" content="قصة مطعم عزوتي في عمّان — من فكرة بسيطة بدأت حكاية عازم ومعزوم لحفظ كرامة الإنسان.">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+</head>
+<body class="story-page-body">
+
+  <!-- ========================================================================
+       TOP HEADER NAVIGATION (Ballena Cabo Style)
+       ======================================================================== -->
+  <header class="site-header scrolled" id="siteHeader">
+    <div class="nav-wrapper">
+      
+      <!-- Left: Hamburger Button -->
+      <div class="nav-left">
+        <button class="menu-trigger" id="menuTriggerBtn" aria-label="Open navigation menu">
+          <span class="hamburger-icon" aria-hidden="true">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </span>
+          <span class="menu-label" data-i18n="menuLabel">القائمة</span>
+        </button>
+      </div>
+
+      <!-- Center: Centered Ezwitti Logo -->
+      <div class="nav-center">
+        <a href="index.html" class="brand-logo" aria-label="Ezwitti Homepage">
+          <span class="brand-title" data-i18n="brandTitle">عِزْوَتِي</span>
+          <span class="brand-sub" data-i18n="brandSub">مطعم اجتماعي غير ربحي</span>
+        </a>
+      </div>
+
+      <!-- Right: Language Switcher & Prominent "Sponsor a Meal" CTA -->
+      <div class="nav-right">
+        <button class="lang-switch-btn" id="langSwitchBtn" aria-label="Switch Language">EN</button>
+        <button class="btn-sponsor btn-sponsor-trigger" data-i18n="sponsorBtn">اعزم شخص</button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       FULL-SCREEN DRAWER MENU
+       ======================================================================== -->
+  <div class="menu-drawer" id="menuDrawer" aria-hidden="true" role="dialog">
+    <div class="drawer-header">
+      <span class="brand-sub" data-i18n="brandSub">مطعم اجتماعي غير ربحي</span>
+      <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">
+        <span data-i18n="closeMenu">إغلاق</span>
+        <span aria-hidden="true" style="font-size: 1.2rem; line-height: 1;">✕</span>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <ul class="drawer-nav-list">
+        <li class="drawer-nav-item">
+          <a href="index.html#hero" class="drawer-nav-link">
+            <span class="drawer-nav-num">01</span>
+            <span data-i18n="navHome">الرئيسية</span>
+          </a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="story.html" class="drawer-nav-link active">
+            <span class="drawer-nav-num">02</span>
+            <span data-i18n="navStory">قصتنا — من عزومة بدأت الحكاية</span>
+          </a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="media.html" class="drawer-nav-link">
+            <span class="drawer-nav-num">03</span>
+            <span data-i18n="navMedia">عزوتي بعيون العالم</span>
+          </a>
+        </li>
+        <li class="drawer-nav-item">
+          <!-- Highlighted Volunteer Link to Dedicated Page -->
+          <a href="volunteer.html" class="drawer-nav-link highlight">
+            <span class="drawer-nav-num">04</span>
+            <span data-i18n="navVolunteer">تطوّع معنا</span>
+          </a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="index.html#contact" class="drawer-nav-link">
+            <span class="drawer-nav-num">05</span>
+            <span data-i18n="navContact">الموقع والتواصل</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="drawer-footer">
+      <span data-i18n="locationNote">عمّان، الأردن — وسط البلد، قرب درج الكلحة</span>
+      <span>© 2015 – 2026 Ezwitti</span>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MAIN STORYTELLING EXPERIENCE (5 Chapters)
+       ======================================================================== -->
+  <main class="story-page-container">
+
+    <!-- SECTION 1 — Opening Statement -->
+    <section class="story-chapter-hero">
+      <div class="container-narrow story-reveal">
+        <span class="story-hero-kicker">حكاية عزوتي — عمّان</span>
+        <h1 class="story-hero-headline font-display-ar">في عزوتي، الكل إله مكان عالسفرة.</h1>
+        <p class="story-lead-quote font-display-ar">تخيّل تدخل مطعم، وتلاقي وجبتك مدفوعة من شخص ما بتعرفه...</p>
+        <p class="story-lead-body">شخص يمكن ما شفته بحياتك، وما رح تعرف اسمه، لكنه قرر يشاركك وجبة، ويترك إلك مكان على السفرة.</p>
+        <p class="story-lead-footer">من هون بتبدأ حكاية عزوتي.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 2 — The Beginning -->
+    <section class="story-chapter bg-warm-tint">
+      <div class="story-chapter-inner story-reveal">
+        <span class="chapter-badge">البداية — 2015</span>
+        <h2 class="chapter-title font-display-ar">حكايتنا بدأت بفكرة بسيطة...</h2>
+        <p class="chapter-paragraph">في قلب عمّان القديمة، وتحديدًا عند درج الكلحة، بدأت حكاية عزوتي عام 2015.</p>
+        <p class="chapter-paragraph">الفكرة كانت بسيطة، لكن معناها كبير:</p>
+
+        <div class="story-callout-block">
+          <p class="story-callout-quote font-display-ar">ليش ما يكون في مطعم الكل بقدر ياكل فيه، بغض النظر عن قدرته على الدفع؟</p>
+        </div>
+
+        <p class="chapter-paragraph">ومن هون وُلد مبدأ «عازم ومعزوم».</p>
+      </div>
+    </section>
+
+    <!-- SECTION 3 — The Concept -->
+    <section class="story-chapter bg-surface">
+      <div class="story-chapter-inner story-reveal">
+        <span class="chapter-badge">فلسفة التكافل</span>
+        <h2 class="chapter-title font-display-ar">عازم ومعزوم... والكرم بين الاثنين</h2>
+        <p class="chapter-paragraph">في عزوتي، في شخص بيجي وبدفع ثمن وجبة لغيره، وفي شخص بيجي وبتكون وجبته جاهزة إله.</p>
+        <p class="chapter-paragraph">ما في أسئلة محرجة، ولا أحكام، ولا فرق بين شخص وشخص.</p>
+
+        <div class="story-callout-block">
+          <p class="story-callout-quote font-display-ar">لأن الكرامة مش امتياز، والوجبة الطيبة حق للجميع.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4 — More Than a Restaurant -->
+    <section class="story-chapter bg-warm-tint">
+      <div class="story-chapter-inner story-reveal">
+        <span class="chapter-badge">المجتمع والعائلة</span>
+        <h2 class="chapter-title font-display-ar">أكثر من مجرد مطعم</h2>
+        <p class="chapter-paragraph">عزوتي مش بس مكان بيقدّم أكل.</p>
+        <p class="chapter-paragraph">هو مكان بتلتقي فيه الحكايات، وبتكبر فيه المحبة، وبيصير فيه الغريب عزوة.</p>
+        <p class="chapter-paragraph">كل وجبة إلها حكاية، وكل متطوع إله أثر، وكل شخص بيمر من هون بيصير جزء من قصة أكبر.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 5 — The Story Continues & Final CTA -->
+    <section class="story-final-chapter">
+      <div class="story-final-inner story-reveal">
+        <span class="chapter-badge">استمرار الأثر</span>
+        <h2 class="chapter-title font-display-ar" style="margin-bottom: 24px;">والحكاية لسه مستمرة...</h2>
+        <p class="chapter-paragraph" style="text-align: center; max-width: 720px; margin: 0 auto 16px;">
+          يمكن ما بتعرف مين رح ياكل الوجبة اللي بتعزم عليها.
+        </p>
+        <p class="chapter-paragraph" style="text-align: center; max-width: 720px; margin: 0 auto 32px;">
+          بس بتعرف إنك رح تكون سبب بابتسامة، ووجبة دافية، ولحظة بتذكّر حدا إنه مش لحاله.
+        </p>
+
+        <div class="story-highlight-quote font-display-ar">
+          في عزوتي، الخير ما بوقف عند شخص... بينتقل من قلب لقلب.
+        </div>
+
+        <p class="story-invitation-text">
+          واليوم، إنت كمان ممكن تكون جزء من الحكاية.
+        </p>
+
+        <div class="story-final-actions">
+          <button class="btn-primary-editorial btn-story-cta btn-sponsor-trigger" data-i18n="popupCta">
+            كن عزوة لغيرك
+          </button>
+          <a href="index.html" class="story-back-link">
+            ← العودة إلى الصفحة الرئيسية
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       SPONSOR A MEAL DIALOG (عازم ومعزوم)
+       ======================================================================== -->
+  <div class="sponsor-dialog" id="sponsorDialog" role="dialog" aria-modal="true" aria-labelledby="sponsorTitle">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="sponsorDialogClose" aria-label="Close dialog">✕</button>
+
+      <div class="modal-body" style="padding: 48px 32px;">
+        <span class="modal-tag">عازم ومعزوم</span>
+        <h2 class="modal-title font-editorial" id="sponsorTitle" data-i18n="sponsorTitle">عازم ومعزوم — اعزم شخص</h2>
+        <p class="modal-desc" data-i18n="sponsorDesc" style="margin-bottom: 20px;">
+          فكرة عزوتي مبنية على أن يقوم القادر بدفع ثمن وجبة لشخص لا يعرفه، وتعليق البطاقة على جدار الخير ليحصل عليها المحتاج بكرامة تامة ودون أن يُسأل عن هويته.
+        </p>
+        <div style="background-color: var(--color-cream-deep); padding: 18px 24px; border-radius: 6px; border-inline-start: 4px solid var(--color-terracotta); text-align: start; margin-bottom: 28px;">
+          <p style="font-size: 0.92rem; color: var(--color-charcoal); line-height: 1.6;" data-i18n="sponsorNote">
+            ملاحظة: بانتظار تفعيل وسائل الدفع المعتمدة رسمياً من إدارة عزوتي، نرحب بزيارتكم الكريمة لمطعمنا في وسط البلد للمشاركة حضورياً.
+          </p>
+        </div>
+
+        <button class="btn-primary-editorial" id="sponsorDialogDismiss" data-i18n="sponsorClose">إغلاق النافذة</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/main.js"></script>
+  <script>
+    // Scroll reveal observer for story chapters
+    document.addEventListener("DOMContentLoaded", () => {
+      const reveals = document.querySelectorAll(".story-reveal");
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        }, { threshold: 0.15 });
+
+        reveals.forEach((el) => observer.observe(el));
+      } else {
+        reveals.forEach((el) => el.classList.add("visible"));
+      }
+    });
+  </script>
+</body>
+</html>

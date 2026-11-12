@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ezwitti — عزوتي | مطعم اجتماعي غير ربحي</title>
+  <meta name="description" content="مطعم اجتماعي غير ربحي في عمّان مبني على مفهوم عازم ومعزوم لحفظ كرامة الإنسان وتعزيز التكافل.">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+</head>
+<body>
+
+  <!-- ========================================================================
+       TOP HEADER NAVIGATION (Ballena Cabo Style)
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-wrapper">
+      
+      <!-- Left: Hamburger Button -->
+      <div class="nav-left">
+        <button class="menu-trigger" id="menuTriggerBtn" aria-label="Open navigation menu">
+          <span class="hamburger-icon" aria-hidden="true">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </span>
+          <span class="menu-label" data-i18n="menuLabel">القائمة</span>
+        </button>
+      </div>
+
+      <!-- Center: Centered Ezwitti Logo -->
+      <div class="nav-center">
+        <a href="index.html" class="brand-logo" aria-label="Ezwitti Homepage">
+          <span class="brand-title" data-i18n="brandTitle">عِزْوَتِي</span>
+          <span class="brand-sub" data-i18n="brandSub">مطعم اجتماعي غير ربحي</span>
+        </a>
+      </div>
+
+      <!-- Right: Language Switcher & Prominent "Sponsor a Meal" CTA -->
+      <div class="nav-right">
+        <button class="lang-switch-btn" id="langSwitchBtn" aria-label="Switch Language">EN</button>
+        <button class="btn-sponsor btn-sponsor-trigger" data-i18n="sponsorBtn">اعزم شخص</button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       FULL-SCREEN DRAWER MENU (Ballena Cabo Style)
+       ======================================================================== -->
+  <div class="menu-drawer" id="menuDrawer" aria-hidden="true" role="dialog">
+    <div class="drawer-header">
+      <span class="brand-sub" data-i18n="brandSub">مطعم اجتماعي غير ربحي</span>
+      <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">
+        <span data-i18n="closeMenu">إغلاق</span>
+        <span aria-hidden="true" style="font-size: 1.2rem; line-height: 1;">✕</span>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <ul class="drawer-nav-list">
+        <li class="drawer-nav-item">
+          <a href="#hero" class="drawer-nav-link active">
+            <span class="drawer-nav-num">01</span>
+            <span data-i18n="navHome">الرئيسية</span>
+          </a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="story.html" class="drawer-nav-link">
+            <span class="drawer-nav-num">02</span>
+            <span data-i18n="navStory">قصتنا — من عزومة بدأت الحكاية</span>
+          </a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="media.html" class="drawer-nav-link">
+            <span class="drawer-nav-num">03</span>
+            <span data-i18n="navMedia">عزوتي بعيون العالم</span>
+          </a>
+        </li>
+        <li class="drawer-nav-item">
+          <!-- Highlighted Volunteer Link to Dedicated Page -->
+          <a href="volunteer.html" class="drawer-nav-link highlight">
+            <span class="drawer-nav-num">04</span>
+            <span data-i18n="navVolunteer">تطوّع معنا</span>
+          </a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="#contact" class="drawer-nav-link">
+            <span class="drawer-nav-num">05</span>
+            <span data-i18n="navContact">الموقع والتواصل</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="drawer-footer">
+      <span data-i18n="locationNote">عمّان، الأردن — وسط البلد، قرب درج الكلحة</span>
+      <span>© 2015 – 2026 Ezwitti</span>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       01 — HERO SECTION (Cinematic Editorial Storytelling Layout)
+       ======================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-background-wrapper">
+      <img src="assets/images/ezwitti_entrance.jpg" alt="Ezwitti Restaurant Entrance — مدخل مطعم عزوتي" class="hero-bg-image">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+      <h1 class="hero-headline" data-i18n="heroTitle">
+        حيث يلتقي العازم والمعزوم على وجبة واحدة، بكرامة وبدون أي حكم
+      </h1>
+
+      <div class="hero-actions">
+        <a href="story.html" class="btn-primary-editorial" data-i18n="heroPrimaryCta">اكتشف قصتنا</a>
+        <a href="volunteer.html" class="btn-outline-editorial" data-i18n="heroSecondaryCta">تطوع معنا</a>
+      </div>
+    </div>
+
+    <a href="#story" class="hero-scroll-prompt" aria-label="Scroll down to story">
+      <span class="scroll-line" aria-hidden="true"></span>
+    </a>
+  </section>
+
+  <!-- ========================================================================
+       INCREMENTAL SECTION PREVIEWS (Stages 2–6)
+       ======================================================================== -->
+  <!-- ========================================================================
+       02 — FOUNDER STORY (Ballena Cabo Split-Screen Editorial Layout)
+       ======================================================================== -->
+  <section class="story-split-section" id="story">
+    <!-- Left Column: 50% Full-Bleed Authentic Photography -->
+    <div class="story-split-media">
+      <img src="assets/images/founder_portrait.png" alt="Founder Mahmoud Al-Nabulsi — مؤسس مطعم عزوتي" class="story-founder-image">
+    </div>
+
+    <!-- Right Column: 50% Terracotta Solid Panel -->
+    <div class="story-split-content">
+      <div class="story-top-block">
+        <span class="story-tag" data-i18n="storyTag">قصتنا — من نبض عمّان</span>
+        <h2 class="story-heading font-editorial" data-i18n="storyHeading">من فكرة صغيرة، بدأت حكاية كبيرة</h2>
+      </div>
+
+      <div class="story-bottom-block">
+        <p class="story-paragraph" data-i18n="storyParagraph">
+          في عام 2015، أسّس محمود النابلسي مطعم عزوتي في قلب عمّان، ليقدّم نموذجاً مختلفاً للتكافل الاجتماعي، يقوم على فكرة عازم ومعزوم، حيث تصبح الوجبة مساحة للكرامة والمشاركة والإنسانية.
+        </p>
+        <a href="story.html" class="story-cta-link">
+          <span class="story-cta-text" data-i18n="storyCtaText">اكتشف حكايتنا</span>
+          <span class="story-cta-arrow" aria-hidden="true">←</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       03 — LOCATION & CONTACT (الموقع والتواصل — Ballena Cabo Style)
+       ======================================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="contact-container">
+      
+      <!-- Section Header -->
+      <div class="contact-header">
+        <span class="contact-kicker" data-i18n="contactKicker">الموقع والتواصل — Location & Contact</span>
+        <h2 class="contact-title" data-i18n="contactTitle">أهلاً بكم في عزوتي</h2>
+        <p class="contact-subtitle" data-i18n="contactSubtitle">
+          نرحب بكم دائماً في قلب عمّان القديمة. زورونا لتشاركونا تجربة التكافل، أو تواصلوا معنا مباشرة.
+        </p>
+      </div>
+
+      <!-- Contact 3-Column Grid -->
+      <div class="contact-grid">
+
+        <!-- Card 1: Locations -->
+        <article class="contact-card">
+          <div class="contact-card-icon icon-olive" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          <h3 class="contact-card-title" data-i18n="locationsTitle">فروعنا ومواقعنا</h3>
+          <div class="contact-card-desc">
+            <div class="contact-location-item">
+              <strong data-i18n="mainBranchLabel">الفرع الرئيسي (عمّان):</strong>
+              <p style="margin-top: 4px;" data-i18n="mainBranchDesc">وسط البلد، قرب درج الكلحة، عمّان — الأردن</p>
+            </div>
+            <div class="contact-location-item">
+              <strong data-i18n="saltBranchLabel">فرع السلط:</strong>
+              <p style="margin-top: 4px;" data-i18n="saltBranchDesc">مدينة السلط — بالشراكة المجتمعية مع شركة وضوح</p>
+            </div>
+          </div>
+          <a href="https://maps.google.com/?q=Daraj+Al+Kalha+Amman" target="_blank" rel="noopener noreferrer" class="contact-action-link" aria-label="عرض موقع مطعم عزوتي على خرائط جوجل">
+            <span data-i18n="mapsAction">عرض الموقع على الخريطة</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </article>
+
+        <!-- Card 2: Phone & Direct Contact -->
+        <article class="contact-card">
+          <div class="contact-card-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </div>
+          <h3 class="contact-card-title" data-i18n="phoneTitle">الاتصال المباشر</h3>
+          <div class="contact-card-desc">
+            <p data-i18n="phoneDesc">للاستفسارات، التنسيق، والترتيب للزيارات الميدانية والتطوع:</p>
+            <div style="margin-top: 14px;">
+              <a href="tel:+962796664878" class="contact-phone-link" aria-label="الاتصال هاتفياً على الرقم 0796664878">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span dir="ltr">0796664878</span>
+              </a>
+              <span class="phone-helper" data-i18n="phoneHelper">انقر للاتصال المباشر من هاتفك المحمول</span>
+            </div>
+            <!-- Email field is strictly kept hidden until verified official email address is provided -->
+            <div class="contact-email-block" id="contactEmailBlock" hidden aria-hidden="true">
+              <!-- Official verified email can be added here once confirmed:
+                   <a href="mailto:official@ezwitti.org" class="contact-email-link">...</a>
+              -->
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Social Media Links -->
+        <article class="contact-card">
+          <div class="contact-card-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+          </div>
+          <h3 class="contact-card-title" data-i18n="socialTitle">تابعونا وتواصلوا معنا</h3>
+          <div class="contact-card-desc">
+            <p data-i18n="socialDesc">تابعوا قصصنا اليومية وأثر وجبات الخير عبر منصاتنا الرسمية:</p>
+            <div class="social-links-list">
+              
+              <!-- Instagram -->
+              <a href="https://www.instagram.com/ezwitti/" target="_blank" rel="noopener noreferrer" class="social-link-item" aria-label="حساب عزوتي الرسمي على إنستغرام">
+                <div class="social-item-main">
+                  <span class="social-icon-wrapper" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                  </span>
+                  <span>Instagram (@ezwitti)</span>
+                </div>
+                <span class="external-arrow" aria-hidden="true">↗</span>
+              </a>
+
+              <!-- Facebook -->
+              <a href="https://www.facebook.com/izzwety/" target="_blank" rel="noopener noreferrer" class="social-link-item" aria-label="صفحة عزوتي الرسمية على فيسبوك">
+                <div class="social-item-main">
+                  <span class="social-icon-wrapper" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                  </span>
+                  <span>Facebook (عزوتي - Ezwitti)</span>
+                </div>
+                <span class="external-arrow" aria-hidden="true">↗</span>
+              </a>
+
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Bottom Actions Bar -->
+      <div class="contact-bottom-bar">
+        <p class="contact-bottom-note" data-i18n="contactBottomNote">
+          عزوتي فكرة تكبر بمحبتكم ومشاركتكم. نرحب دائماً بالمتطوعين والداعمين.
+        </p>
+        <div class="contact-bottom-actions">
+          <a href="volunteer.html" class="btn-primary-editorial" data-i18n="heroSecondaryCta">تطوّع معنا</a>
+          <button class="btn-sponsor btn-sponsor-trigger" data-i18n="sponsorBtn">اعزم شخص</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FIRST-VISIT WALL OF KINDNESS WELCOME POPUP (Ballena Cabo Style)
+       ======================================================================== -->
+  <div class="welcome-modal" id="welcomeModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="welcomeModalClose" aria-label="إغلاق النافذة">✕</button>
+      
+      <div class="modal-body">
+        <span class="modal-tag" data-i18n="popupTag">جدار الخير</span>
+        <h2 class="modal-title font-editorial" id="modalTitle" data-i18n="popupTitle">كل ورقة بتحكي حكاية خير</h2>
+        <p class="modal-desc" data-i18n="popupDesc">
+          على حائط عزوتي، ترك الناس كلمات من القلب، ورسائل محبة، وحكايات بتذكرنا إن الخير بيجمعنا.
+        </p>
+
+        <!-- Interactive Organic Note Cards Wall -->
+        <div class="wall-of-kindness-grid" id="wallNotesContainer">
+          <!-- Card 1 -->
+          <div class="kindness-card card-yellow" data-card-id="1" tabindex="0" role="button" aria-label="بطاقة خير 1">
+            <div class="card-tape"></div>
+            <p class="card-text">"وجبة دافئة بالهنا والشفاء لأخوي.. صحتين وعافية على قلبك"</p>
+            <span class="card-author">عازم مجهول — عمّان</span>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="kindness-card card-terracotta" data-card-id="2" tabindex="0" role="button" aria-label="بطاقة خير 2">
+            <div class="card-tape"></div>
+            <p class="card-text">"عزومة محبة من أهل عمّان، كرامتكم عزوتنا وفخرنا دايماً"</p>
+            <span class="card-author">أهل عمّان</span>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="kindness-card card-olive" data-card-id="3" tabindex="0" role="button" aria-label="بطاقة خير 3">
+            <div class="card-tape"></div>
+            <p class="card-text">"فَكّر بغيرك.. كلنا لبعض، والدنيا لسا بخير بوجودكم"</p>
+            <span class="card-author">متطوع في عزوتي</span>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="kindness-card card-pink" data-card-id="4" tabindex="0" role="button" aria-label="بطاقة خير 4">
+            <div class="card-tape"></div>
+            <p class="card-text">"عزومة دافئة من طالب جامعي.. لك يا صاحب أطيب قلب"</p>
+            <span class="card-author">طالب جامعي</span>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="kindness-card card-cream" data-card-id="5" tabindex="0" role="button" aria-label="بطاقة خير 5">
+            <div class="card-tape"></div>
+            <p class="card-text">"لديك ما يكفيك من خبز، ولكن ليس ما يكفي جميع الناس.. بالصحة والعافية"</p>
+            <span class="card-author">من حائط عزوتي</span>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="kindness-card card-sky" data-card-id="6" tabindex="0" role="button" aria-label="بطاقة خير 6">
+            <div class="card-tape"></div>
+            <p class="card-text">"من أهل السلط إلى أهل عمّان.. يد وحدة وقلب واحد في الخير"</p>
+            <span class="card-author">أهل السلط</span>
+          </div>
+        </div>
+
+        <p class="wall-hint">
+          <span class="hint-icon">👆</span>
+          <span data-i18n="wallHint">انقر على أي بطاقة لقراءة الرسالة كاملة</span>
+        </p>
+
+        <!-- CTA Actions -->
+        <div class="modal-actions">
+          <button class="btn-primary-editorial" id="welcomeModalSponsor" data-i18n="popupCta">كن عزوة لغيرك</button>
+          <button class="btn-outline-editorial" id="welcomeModalExplore" style="color: var(--color-charcoal); border-color: var(--color-border);" data-i18n="popupExplore">تصفح الموقع</button>
+        </div>
+      </div>
+
+      <!-- Expanded Single Card Viewer Modal -->
+      <div class="card-expanded-viewer" id="cardExpandedViewer" aria-hidden="true">
+        <div class="card-expanded-box" id="cardExpandedBox">
+          <button class="card-expanded-close" id="cardExpandedClose" aria-label="إغلاق البطاقة">✕</button>
+          <div class="card-tape-large"></div>
+          <p class="card-expanded-text" id="cardExpandedText"></p>
+          <span class="card-expanded-author" id="cardExpandedAuthor"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SPONSOR A MEAL (اعزم شخص) AUTHENTIC MODAL
+       ======================================================================== -->
+  <div class="sponsor-dialog" id="sponsorDialog" role="dialog" aria-modal="true" aria-labelledby="sponsorTitle">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="sponsorDialogClose" aria-label="Close dialog">✕</button>
+
+      <div class="modal-body" style="padding: 48px 32px;">
+        <span class="modal-tag">عازم ومعزوم</span>
+        <h2 class="modal-title font-editorial" id="sponsorTitle" data-i18n="sponsorTitle">عازم ومعزوم — اعزم شخص</h2>
+        <p class="modal-desc" data-i18n="sponsorDesc" style="margin-bottom: 20px;">
+          فكرة عزوتي مبنية على أن يقوم القادر بدفع ثمن وجبة لشخص لا يعرفه، وتعليق البطاقة على جدار الخير ليحصل عليها المحتاج بكرامة تامة ودون أن يُسأل عن هويته.
+        </p>
+        <div style="background-color: var(--color-cream-deep); padding: 18px 24px; border-radius: 6px; border-inline-start: 4px solid var(--color-terracotta); text-align: start; margin-bottom: 28px;">
+          <p style="font-size: 0.92rem; color: var(--color-charcoal); line-height: 1.6;" data-i18n="sponsorNote">
+            ملاحظة: بانتظار تفعيل وسائل الدفع المعتمدة رسمياً من إدارة عزوتي، نرحب بزيارتكم الكريمة لمطعمنا في وسط البلد للمشاركة حضورياً.
+          </p>
+        </div>
+
+        <button class="btn-primary-editorial" id="sponsorDialogDismiss" data-i18n="sponsorClose">إغلاق النافذة</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
