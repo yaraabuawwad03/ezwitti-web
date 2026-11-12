@@ -160,6 +160,26 @@ img {
   display: block;
 }
 
+/* Universal Button Reset & Normalization */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
 /* Container */
 .container {
   width: 100%;
@@ -353,6 +373,102 @@ img {
 
 .site-header.scrolled .lang-switch-btn:hover {
   background: rgba(48, 48, 45, 0.06);
+}
+
+/* ==========================================================================
+   STANDARDIZED BRAND BUTTONS (Primary & Secondary Editorial)
+   Consistent Brand Identity: Terracotta (#B85C38), Cream, Rounded Full,
+   Clean Typography (Cairo/IBM Plex Sans Arabic), Fluid Transitions
+   ========================================================================== */
+
+/* Primary Button: Terracotta fill, white text, rounded corners */
+.btn-primary-editorial {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-terracotta);
+  color: #FFFFFF !important;
+  font-family: var(--font-sans-ar);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 32px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--color-terracotta);
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  line-height: 1.4;
+  white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(184, 92, 56, 0.28);
+  transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+[dir="rtl"] .btn-primary-editorial {
+  font-family: var(--font-sans-ar);
+}
+
+.btn-primary-editorial:hover {
+  background-color: var(--color-terracotta-hover);
+  border-color: var(--color-terracotta-hover);
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(184, 92, 56, 0.38);
+}
+
+.btn-primary-editorial:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(184, 92, 56, 0.3);
+}
+
+.btn-primary-editorial:focus-visible {
+  outline: 2px solid var(--color-terracotta);
+  outline-offset: 3px;
+}
+
+/* Secondary Button: Transparent/Cream background, terracotta border & text */
+.btn-outline-editorial {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--color-terracotta) !important;
+  font-family: var(--font-sans-ar);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 32px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--color-terracotta);
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  line-height: 1.4;
+  white-space: nowrap;
+  transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+[dir="rtl"] .btn-outline-editorial {
+  font-family: var(--font-sans-ar);
+}
+
+.btn-outline-editorial:hover {
+  background-color: var(--color-terracotta);
+  color: #FFFFFF !important;
+  border-color: var(--color-terracotta);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(184, 92, 56, 0.25);
+}
+
+.btn-outline-editorial:active {
+  transform: translateY(0);
+}
+
+.btn-outline-editorial:focus-visible {
+  outline: 2px solid var(--color-terracotta);
+  outline-offset: 3px;
 }
 
 /* Sponsor a Meal (اعزم شخص) — Ballena Cabo "Book Now" equivalent */
@@ -621,7 +737,7 @@ img {
   font-size: clamp(1.6rem, 2.7vw, 2.5rem);
   line-height: 1.48;
   color: #FFFDF8;
-  margin: 0 0 10px 0;
+  margin: 0 0 clamp(20px, 2.4vw, 28px) 0;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.95);
   letter-spacing: 0;
   display: flex;
@@ -642,23 +758,10 @@ img {
   white-space: nowrap;
 }
 
-/* Thin Terracotta Curved Underline */
-.hero-curved-underline-wrap 
-display: none !important;{
-  align-self: flex-end;
-  width: clamp(170px, 19vw, 210px);
-  height: 18px;
-  margin: 4px 0 24px 0;
-}
-
-[dir="rtl"] .hero-curved-underline-wrap {
-  align-self: flex-end;
-}
-
+/* Decorative Elements Removed */
+.hero-curved-underline-wrap,
 .hero-curved-underline {
-  width: 100%;
-  height: 100%;
-  display: block;
+  display: none !important;
 }
 
 .hero-actions {
@@ -1684,6 +1787,7 @@ display: none !important;{
     text-align: center;
     font-size: clamp(1.35rem, 5.2vw, 1.85rem);
     line-height: 1.45;
+    margin-bottom: 20px;
   }
   [dir="rtl"] .hero-headline {
     align-items: center;
@@ -1691,14 +1795,6 @@ display: none !important;{
   }
   .hero-headline-line {
     white-space: normal;
-  }
-  .hero-curved-underline-wrap {
-    align-self: center;
-    margin: 4px auto 20px auto;
-    width: 170px;
-  }
-  [dir="rtl"] .hero-curved-underline-wrap {
-    align-self: center;
   }
   .hero-actions {
     justify-content: center;
@@ -1978,13 +2074,13 @@ display: none !important;{
   font-weight: 400;
 }
 
-/* Callout Highlight Block */
+/* Callout Highlight Block — Clean without vertical decorative line */
 .story-callout-block {
   margin: var(--space-xl) 0;
   padding: var(--space-lg) var(--space-xl);
   background-color: #FFFDF9;
-  border-inline-start: 4px solid var(--color-terracotta);
-  border-radius: 4px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
   box-shadow: 0 8px 24px rgba(48, 48, 45, 0.04);
 }
 
@@ -2042,9 +2138,13 @@ display: none !important;{
 }
 
 .btn-story-cta {
-  font-size: 1.1rem;
-  padding: 16px 48px;
-  box-shadow: 0 12px 32px rgba(184, 92, 56, 0.35);
+  font-size: 1.15rem;
+  padding: 15px 46px;
+  box-shadow: 0 8px 26px rgba(184, 92, 56, 0.35);
+}
+
+.btn-story-cta:hover {
+  box-shadow: 0 12px 32px rgba(184, 92, 56, 0.45);
 }
 
 .story-back-link {
@@ -2530,3 +2630,10 @@ display: none !important;{
     font-size: 2.1rem;
   }
 }
+
+/* Explicit suppression of decorative line elements across viewports */
+.hero-curved-underline-wrap,
+.hero-curved-underline {
+  display: none !important;
+}
+
