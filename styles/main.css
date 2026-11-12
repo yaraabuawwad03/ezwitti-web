@@ -643,7 +643,8 @@ img {
 }
 
 /* Thin Terracotta Curved Underline */
-.hero-curved-underline-wrap {
+.hero-curved-underline-wrap 
+display: none !important;{
   align-self: flex-end;
   width: clamp(170px, 19vw, 210px);
   height: 18px;
