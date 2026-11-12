@@ -1629,6 +1629,8 @@ img {
     padding: 9px 18px;
     font-size: 0.78rem;
   }
+}
+
 @media (max-width: 768px) {
   .menu-label {
     display: none;
