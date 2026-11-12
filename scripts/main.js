@@ -205,31 +205,47 @@ function initHeaderScroll() {
   onScroll();
 }
 
-// Full-screen Drawer Menu
+// Full-screen Drawer Menu with Staggered Reveal and Controlled Click Animation
 function initMenuDrawer() {
   const openBtn = document.getElementById("menuTriggerBtn");
   const closeBtn = document.getElementById("drawerCloseBtn");
   const drawer = document.getElementById("menuDrawer");
   if (!drawer || !openBtn || !closeBtn) return;
 
+  const navList = drawer.querySelector(".drawer-nav-list");
+  const navLinks = drawer.querySelectorAll(".drawer-nav-link");
+  let isNavigating = false;
+
+  const resetSelection = () => {
+    if (navList) navList.classList.remove("has-selection");
+    navLinks.forEach(l => l.classList.remove("is-clicked"));
+    isNavigating = false;
+  };
+
   const openDrawer = () => {
+    resetSelection();
     drawer.classList.add("active");
+    drawer.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
   };
 
   const closeDrawer = () => {
     drawer.classList.remove("active");
+    drawer.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "";
+
+    // Reset selection states after exit transition completes
+    setTimeout(resetSelection, 350);
   };
 
   openBtn.addEventListener("click", openDrawer);
   closeBtn.addEventListener("click", closeDrawer);
 
-  // Close when clicking nav links
-  drawer.querySelectorAll(".drawer-nav-link").forEach(link => {
-    link.addEventListener("click", () => {
+  // Close when clicking empty space outside navigation list
+  drawer.addEventListener("click", (e) => {
+    if (e.target === drawer || e.target.classList.contains("drawer-body")) {
       closeDrawer();
-    });
+    }
   });
 
   // Esc key to close
@@ -238,6 +254,58 @@ function initMenuDrawer() {
       closeDrawer();
     }
   });
+
+  // Smooth Click Scale Animation and Navigation
+  navLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+      // Allow default behavior for modifier clicks (e.g., cmd/ctrl click to open in new tab)
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) {
+        return;
+      }
+
+      const href = link.getAttribute("href");
+      if (!href) return;
+
+      e.preventDefault();
+
+      if (isNavigating) return;
+      isNavigating = true;
+
+      const prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (prefersReducedMotion) {
+        closeDrawer();
+        executeNavigation(href);
+        return;
+      }
+
+      // 1. Smoothly scale selected item, softly dim siblings
+      if (navList) navList.classList.add("has-selection");
+      link.classList.add("is-clicked");
+
+      // 2. Allow the controlled scale animation to complete smoothly (~380ms)
+      setTimeout(() => {
+        closeDrawer();
+
+        // 3. Complete navigation as the drawer exit transition begins
+        setTimeout(() => {
+          executeNavigation(href);
+        }, 160);
+      }, 380);
+    });
+  });
+
+  function executeNavigation(href) {
+    if (href.startsWith("#")) {
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+        try { history.pushState(null, "", href); } catch (_) {}
+      }
+    } else {
+      window.location.href = href;
+    }
+  }
 }
 
 // Welcome Popup (Wall of Kindness — First Visit)
