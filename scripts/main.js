@@ -14,6 +14,9 @@ const i18n = {
     
     // Hero
     heroTitle: "حيث يلتقي العازم والمعزوم على وجبة واحدة، بكرامة وبدون أي حكم",
+    heroTitleLine1: "حيث يلتقي العازم والمعزوم",
+    heroTitleLine2: "على وجبة واحدة،",
+    heroTitleLine3: "بكرامة وبدون أي حكم",
     heroPrimaryCta: "اكتشف قصتنا",
     heroSecondaryCta: "تطوع معنا",
     heroScroll: "تمرير للأسفل",
@@ -75,6 +78,9 @@ const i18n = {
     
     // Hero
     heroTitle: "Where host and guest meet over a shared meal, with dignity and without judgment",
+    heroTitleLine1: "Where host and guest meet",
+    heroTitleLine2: "over a shared meal,",
+    heroTitleLine3: "with dignity and without judgment",
     heroPrimaryCta: "Discover Our Story",
     heroSecondaryCta: "Volunteer With Us",
     heroScroll: "SCROLL DOWN",
